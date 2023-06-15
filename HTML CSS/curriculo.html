@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Currículo</h1>
+        <div class="field">
+            <label class="form-label">Nome:</label>
+            <span id="nome" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Email:</label>
+            <span id="email" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Idioma extra:</label>
+            <span id="idiomas" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Idade:</label>
+            <span id="idade" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">LinkedIn:</label>
+            <span id="linkedin" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Github:</label>
+            <span id="github" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Curso Superior:</label>
+            <span id="curso" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Cursos Extras:</label>
+            <span id="cursos" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Experiência Profissional:</label>
+            <span id="experiencia" class="form-control-plaintext"></span>
+        </div>
+        <div class="field">
+            <label class="form-label">Sobre Mim:</label>
+            <span id="sobre" class="form-control-plaintext"></span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+
+            var nome = params.get('nome');
+            var email = params.get('email');
+            var idiomas = params.get('idiomas');
+            var idade = params.get('idade');
+            var linkedin = params.get('linkedin');
+            var github = params.get('github');
+            var curso = params.get('curso-superior');
+            var cursos = params.get('cursos-extras');
+            var experiencia = params.get('exp-prof');
+            var sobre = params.get('textarea');
+
+            document.getElementById('nome').textContent = nome;
+            document.getElementById('email').textContent = email;
+            document.getElementById('idiomas').textContent = idiomas;
+            document.getElementById('idade').textContent = idade;
+            document.getElementById('linkedin').textContent = linkedin;
+            document.getElementById('github').textContent = github;
+            document.getElementById('curso').textContent = curso;
+            document.getElementById('cursos').textContent = cursos;
+            document.getElementById('experiencia').textContent = experiencia;
+            document.getElementById('sobre').textContent = sobre;
+        });
+
+    </script>
+
+</body>
+</html>
